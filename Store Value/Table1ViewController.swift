@@ -11,7 +11,7 @@ import UIKit
 class Table1ViewController: UITableViewController {
 
     
-    let Fitem = ["Frankie","French Fires","Burger"]
+    var Fitem = ["Frankie","French Fries","Burger"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,30 @@ class Table1ViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    
 
-
+    @IBAction func BtnAdd(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add new Food Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (Action) in
+            //Actions take place when add button clicked
+            self.Fitem.append(textField.text!)
+            self.tableView.reloadData()
+        
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create new item"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+      
+        
+    }
+    
 }
 

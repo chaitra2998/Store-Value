@@ -32,7 +32,16 @@
                             <outlet property="delegate" destination="ySR-sT-8fs" id="d0I-0h-l7j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food" id="Why-LU-WG3"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Food" id="Why-LU-WG3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4sz-go-eCt">
+                            <color key="tintColor" red="0.21071202759999999" green="0.27744853850000001" blue="0.91545050760000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="BtnAdd:" destination="ySR-sT-8fs" id="94H-VP-UgO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QcX-Yx-TTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
